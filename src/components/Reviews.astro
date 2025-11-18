@@ -11,14 +11,14 @@
 
     <!-- Carousel Container -->
     <div class="max-w-6xl mx-auto">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 md:gap-4">
         <!-- Previous Arrow -->
         <button
           id="review-prev"
-          class="shrink-0 bg-white rounded-full p-3 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+          class="hidden md:flex shrink-0 bg-white rounded-full p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
           aria-label="Previous review">
           <svg
-            class="w-6 h-6 text-cyan-600"
+            class="w-5 h-5 md:w-6 md:h-6 text-cyan-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24">
@@ -31,16 +31,16 @@
         </button>
 
         <!-- Carousel Track -->
-        <div class="flex-1 overflow-hidden py-4 rounded-2xl">
+        <div class="flex-1 overflow-hidden py-2 md:py-4 rounded-2xl">
           <div id="reviews-carousel" class="flex">
             <!-- Review 1 -->
-            <div class="review-slide min-w-full px-4">
+            <div class="review-slide min-w-full px-2 md:px-4">
               <div
-                class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center mb-4">
+                class="bg-white rounded-2xl shadow-md p-4 md:p-6 border border-gray-100">
+                <div class="flex items-center mb-3 md:mb-4">
                   <div class="flex text-yellow-400">
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 md:w-5 md:h-5"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path
@@ -81,34 +81,37 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p
+                  class="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
                   "Nas is an amazing instructor! She made me feel so comfortable
                   and confident. I passed my test on the first try thanks to her
                   patient teaching style."
                 </p>
                 <div
-                  class="border-t border-gray-100 pt-4 flex items-center gap-3">
+                  class="border-t border-gray-100 pt-3 md:pt-4 flex items-center gap-2 md:gap-3">
                   <img
                     src="https://i.pravatar.cc/150?img=47"
                     alt="Sarah M."
-                    class="w-12 h-12 rounded-full object-cover border-2 border-cyan-100"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-cyan-100"
                   />
                   <div>
-                    <p class="font-semibold text-gray-900">Sarah M.</p>
-                    <p class="text-sm text-gray-600">Camden</p>
+                    <p class="font-semibold text-gray-900 text-sm md:text-base">
+                      Sarah M.
+                    </p>
+                    <p class="text-xs md:text-sm text-gray-600">Camden</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Review 2 -->
-            <div class="review-slide min-w-full px-4">
+            <div class="review-slide min-w-full px-2 md:px-4">
               <div
-                class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center mb-4">
+                class="bg-white rounded-2xl shadow-md p-4 md:p-6 border border-gray-100">
+                <div class="flex items-center mb-3 md:mb-4">
                   <div class="flex text-yellow-400">
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 md:w-5 md:h-5"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path
@@ -149,34 +152,39 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p
+                  class="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
                   "Best driving instructor in the area! Nas is so patient and
                   explains everything clearly. Highly recommend to anyone
                   learning to drive."
                 </p>
                 <div
-                  class="border-t border-gray-100 pt-4 flex items-center gap-3">
+                  class="border-t border-gray-100 pt-3 md:pt-4 flex items-center gap-2 md:gap-3">
                   <img
                     src="https://i.pravatar.cc/150?img=33"
                     alt="James T."
-                    class="w-12 h-12 rounded-full object-cover border-2 border-cyan-100"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-cyan-100"
                   />
                   <div>
-                    <p class="font-semibold text-gray-900">James T.</p>
-                    <p class="text-sm text-gray-600">Gregory Hills</p>
+                    <p class="font-semibold text-gray-900 text-sm md:text-base">
+                      James T.
+                    </p>
+                    <p class="text-xs md:text-sm text-gray-600">
+                      Gregory Hills
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Review 3 -->
-            <div class="review-slide min-w-full px-4">
+            <div class="review-slide min-w-full px-2 md:px-4">
               <div
-                class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center mb-4">
+                class="bg-white rounded-2xl shadow-md p-4 md:p-6 border border-gray-100">
+                <div class="flex items-center mb-3 md:mb-4">
                   <div class="flex text-yellow-400">
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 md:w-5 md:h-5"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path
@@ -217,34 +225,37 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p
+                  class="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
                   "I was really nervous about learning to drive, but Nas made
                   the whole experience stress-free. Her calm approach helped me
                   build confidence quickly."
                 </p>
                 <div
-                  class="border-t border-gray-100 pt-4 flex items-center gap-3">
+                  class="border-t border-gray-100 pt-3 md:pt-4 flex items-center gap-2 md:gap-3">
                   <img
                     src="https://i.pravatar.cc/150?img=68"
                     alt="Emma L."
-                    class="w-12 h-12 rounded-full object-cover border-2 border-cyan-100"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-cyan-100"
                   />
                   <div>
-                    <p class="font-semibold text-gray-900">Emma L.</p>
-                    <p class="text-sm text-gray-600">Spring Farm</p>
+                    <p class="font-semibold text-gray-900 text-sm md:text-base">
+                      Emma L.
+                    </p>
+                    <p class="text-xs md:text-sm text-gray-600">Spring Farm</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Review 4 -->
-            <div class="review-slide min-w-full px-4">
+            <div class="review-slide min-w-full px-2 md:px-4">
               <div
-                class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-                <div class="flex items-center mb-4">
+                class="bg-white rounded-2xl shadow-md p-4 md:p-6 border border-gray-100">
+                <div class="flex items-center mb-3 md:mb-4">
                   <div class="flex text-yellow-400">
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 md:w-5 md:h-5"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path
@@ -285,21 +296,24 @@
                     </svg>
                   </div>
                 </div>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p
+                  class="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
                   "Excellent instructor! Nas knows all the local test routes and
                   helped me prepare perfectly. I felt ready and confident on
                   test day."
                 </p>
                 <div
-                  class="border-t border-gray-100 pt-4 flex items-center gap-3">
+                  class="border-t border-gray-100 pt-3 md:pt-4 flex items-center gap-2 md:gap-3">
                   <img
                     src="https://i.pravatar.cc/150?img=12"
                     alt="Michael R."
-                    class="w-12 h-12 rounded-full object-cover border-2 border-cyan-100"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-cyan-100"
                   />
                   <div>
-                    <p class="font-semibold text-gray-900">Michael R.</p>
-                    <p class="text-sm text-gray-600">Camden</p>
+                    <p class="font-semibold text-gray-900 text-sm md:text-base">
+                      Michael R.
+                    </p>
+                    <p class="text-xs md:text-sm text-gray-600">Camden</p>
                   </div>
                 </div>
               </div>
@@ -310,10 +324,46 @@
         <!-- Next Arrow -->
         <button
           id="review-next"
-          class="shrink-0 bg-white rounded-full p-3 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+          class="hidden md:flex shrink-0 bg-white rounded-full p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
           aria-label="Next review">
           <svg
-            class="w-6 h-6 text-cyan-600"
+            class="w-5 h-5 md:w-6 md:h-6 text-cyan-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Arrows (below carousel) -->
+      <div class="flex md:hidden justify-center gap-4 mt-4">
+        <button
+          id="review-prev-mobile"
+          class="bg-white rounded-full p-2 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+          aria-label="Previous review">
+          <svg
+            class="w-5 h-5 text-cyan-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button
+          id="review-next-mobile"
+          class="bg-white rounded-full p-2 shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+          aria-label="Next review">
+          <svg
+            class="w-5 h-5 text-cyan-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24">
@@ -327,7 +377,7 @@
       </div>
 
       <!-- Dot Indicators -->
-      <div class="flex justify-center gap-2 mt-8">
+      <div class="flex justify-center gap-2 mt-4 md:mt-8">
         <button
           class="review-dot w-3 h-3 rounded-full bg-cyan-600 transition-all"
           data-index="0"
@@ -348,12 +398,12 @@
     </div>
 
     <!-- Google Review Button -->
-    <div class="text-center mt-8">
+    <div class="text-center mt-6 md:mt-8 px-4">
       <a
         href="https://g.page/r/YourUniqueCode/review"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-colors shadow-md hover:shadow-xl">
+        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-xl transition-colors shadow-md hover:shadow-xl text-sm md:text-base">
         Leave a Google Review →
       </a>
     </div>
@@ -377,6 +427,8 @@
     const carousel = document.getElementById("reviews-carousel");
     const prevBtn = document.getElementById("review-prev");
     const nextBtn = document.getElementById("review-next");
+    const prevBtnMobile = document.getElementById("review-prev-mobile");
+    const nextBtnMobile = document.getElementById("review-next-mobile");
     const dots = document.querySelectorAll(".review-dot");
 
     if (!carousel || totalSlides === 0) return;
@@ -418,6 +470,8 @@
     // Event listeners
     if (nextBtn) nextBtn.addEventListener("click", nextSlide);
     if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+    if (nextBtnMobile) nextBtnMobile.addEventListener("click", nextSlide);
+    if (prevBtnMobile) prevBtnMobile.addEventListener("click", prevSlide);
 
     dots.forEach(function (dot, index) {
       dot.addEventListener("click", function () {
@@ -440,6 +494,14 @@
   #reviews-carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    touch-action: pan-y;
+  }
+
+  /* Enable touch scrolling on mobile */
+  @media (max-width: 768px) {
+    #reviews-carousel {
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   /* Carousel Navigation Buttons */

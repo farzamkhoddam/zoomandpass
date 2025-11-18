@@ -35,15 +35,6 @@ const currentPath = Astro.url.pathname;
           About
         </a>
         <a
-          href="/pricing"
-          class={`font-semibold transition-colors ${
-            currentPath === "/pricing"
-              ? "text-cyan-600 border-b-2 border-cyan-600 pb-1"
-              : "text-gray-700 hover:text-cyan-600"
-          }`}>
-          Pricing
-        </a>
-        <a
           href="/contact"
           class={`font-semibold transition-colors ${
             currentPath === "/contact"
@@ -136,15 +127,6 @@ const currentPath = Astro.url.pathname;
             : "text-gray-700 hover:bg-gray-100"
         }`}>
         About
-      </a>
-      <a
-        href="/pricing"
-        class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
-          currentPath === "/pricing"
-            ? "text-cyan-600 bg-cyan-50"
-            : "text-gray-700 hover:bg-gray-100"
-        }`}>
-        Pricing
       </a>
       <a
         href="/contact"
