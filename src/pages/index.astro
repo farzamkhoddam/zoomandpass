@@ -8,13 +8,6 @@ import Reviews from "../components/Reviews.astro";
 <Layout>
   <Header />
 
-  <!-- Sticky Book Now Button (Mobile) -->
-  <a
-    href="/booking"
-    class="fixed bottom-0 left-0 right-0 z-50 font-bold py-4 px-6 text-center text-lg shadow-lg md:hidden transition-colors btn-primary">
-    Book Now
-  </a>
-
   <!-- Hero Section -->
   <section
     class="relative min-h-screen flex items-center justify-center bg-linear-to-br from-cyan-50 to-cyan-100">
@@ -210,12 +203,5 @@ import Reviews from "../components/Reviews.astro";
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Add padding bottom on mobile to account for sticky button */
-  @media (max-width: 768px) {
-    body {
-      padding-bottom: 80px;
-    }
   }
 </style>

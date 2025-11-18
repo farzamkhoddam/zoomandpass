@@ -2,15 +2,15 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between py-4">
       <!-- Logo -->
       <a href="/" class="flex items-center">
         <img
-          src="/IMG_7027.jpeg"
+          src="/Logo.jpeg"
           alt="Zoom & Pass Logo"
-          class="h-14 md:h-18 w-auto object-contain rounded-[15px]"
+          class="h-14 md:h-20 w-auto object-contain rounded-[15px]"
         />
       </a>
 
@@ -44,81 +44,171 @@ const currentPath = Astro.url.pathname;
           Pricing
         </a>
         <a
+          href="/contact"
+          class={`font-semibold transition-colors ${
+            currentPath === "/contact"
+              ? "text-cyan-600 border-b-2 border-cyan-600 pb-1"
+              : "text-gray-700 hover:text-cyan-600"
+          }`}>
+          Contact Us
+        </a>
+        <a
           href="/booking"
           class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-xl transition-colors shadow-lg">
           Book Now
         </a>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-button"
-        class="md:hidden p-2 text-gray-700 hover:text-cyan-600 transition-colors"
-        aria-label="Toggle menu">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav
-      id="mobile-menu"
-      class="hidden md:hidden pb-4 border-t border-gray-200 mt-2">
-      <div class="flex flex-col space-y-3 pt-4">
-        <a
-          href="/"
-          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
-            currentPath === "/"
-              ? "text-cyan-600 bg-cyan-50"
-              : "text-gray-700 hover:bg-gray-100"
-          }`}>
-          Home
-        </a>
-        <a
-          href="/about"
-          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
-            currentPath === "/about"
-              ? "text-cyan-600 bg-cyan-50"
-              : "text-gray-700 hover:bg-gray-100"
-          }`}>
-          About
-        </a>
-        <a
-          href="/pricing"
-          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
-            currentPath === "/pricing"
-              ? "text-cyan-600 bg-cyan-50"
-              : "text-gray-700 hover:bg-gray-100"
-          }`}>
-          Pricing
-        </a>
+      <!-- Mobile Menu Button and Book Now -->
+      <div class="md:hidden flex items-center gap-3">
         <a
           href="/booking"
-          class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-xl transition-colors shadow-lg text-center">
+          class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-xl transition-colors shadow-lg text-sm">
           Book Now
         </a>
+        <button
+          id="mobile-menu-button"
+          class="p-2 text-gray-700 hover:text-cyan-600 transition-colors"
+          aria-label="Toggle menu">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-    </nav>
+    </div>
   </div>
+
+  <!-- Mobile Navigation (Outside container for proper fixed positioning) -->
+  <nav
+    id="mobile-menu"
+    class="hidden md:hidden fixed top-0 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto shadow-lg">
+    <!-- Mobile Menu Header -->
+    <div class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <img
+          src="/Logo.jpeg"
+          alt="Zoom & Pass Logo"
+          class="h-12 w-auto object-contain rounded-[15px]"
+        />
+        <button
+          id="mobile-menu-close"
+          class="p-2 text-gray-700 hover:text-cyan-600 transition-colors"
+          aria-label="Close menu">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu Content -->
+    <div class="container mx-auto px-4 py-6 flex flex-col space-y-3">
+      <a
+        href="/"
+        class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+          currentPath === "/"
+            ? "text-cyan-600 bg-cyan-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}>
+        Home
+      </a>
+      <a
+        href="/about"
+        class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+          currentPath === "/about"
+            ? "text-cyan-600 bg-cyan-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}>
+        About
+      </a>
+      <a
+        href="/pricing"
+        class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+          currentPath === "/pricing"
+            ? "text-cyan-600 bg-cyan-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}>
+        Pricing
+      </a>
+      <a
+        href="/contact"
+        class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+          currentPath === "/contact"
+            ? "text-cyan-600 bg-cyan-50"
+            : "text-gray-700 hover:bg-gray-100"
+        }`}>
+        Contact Us
+      </a>
+    </div>
+  </nav>
 </header>
 
 <script>
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  function closeMobileMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+  }
+
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
       mobileMenu.classList.toggle("hidden");
+
+      // Prevent body scroll when menu is open
+      if (isHidden) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Close button
+    const closeButton = document.getElementById("mobile-menu-close");
+    if (closeButton) {
+      closeButton.addEventListener("click", () => {
+        closeMobileMenu();
+      });
+    }
+
+    // Close menu when clicking on any link
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMobileMenu();
+      });
     });
   }
 </script>
 
+<style>
+  /* Ensure mobile menu stays fixed */
+  #mobile-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 9999 !important;
+  }
+</style>
