@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Book Your Lesson - Zoom & Pass">
+  <Header />
+
+  <!-- Sticky Book Now Button (Mobile) -->
+  <a
+    href="/booking"
+    class="fixed bottom-0 left-0 right-0 z-50 font-bold py-4 px-6 text-center text-lg shadow-lg md:hidden transition-colors btn-primary">
+    Book Now
+  </a>
+
+  <div class="min-h-screen bg-gray-50 py-16 pb-24 md:pb-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold text-center text-cyan-600 mb-8">
+        Book Your Lesson
+      </h1>
+      <p class="text-center text-gray-600 mb-8">
+        Select a date and time that works for you
+      </p>
+      <div class="booking-container max-w-4xl mx-auto">
+        <!-- Calendly inline widget -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/farzamfara85/30min"
+          style="min-width:320px;height:700px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+
+  <!-- Calendly script -->
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async></script>
+</Layout>
+
+<style>
+  /* Button styles - Yellow for CTAs */
+  .btn-primary {
+    background-color: #facc15; /* Yellow 400 */
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    background-color: #eab308; /* Yellow 500 */
+  }
+
+  /* Ensure minimum font size for readability */
+  body {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add padding bottom on mobile to account for sticky button */
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 80px;
+    }
+  }
+
+  /* Booking calendar should fit one screen scroll on mobile */
+  @media (max-width: 768px) {
+    .booking-container {
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+
+    .calendly-inline-widget {
+      height: 600px !important;
+    }
+  }
+
+  /* Calendly widget styling */
+  .calendly-inline-widget {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+</style>

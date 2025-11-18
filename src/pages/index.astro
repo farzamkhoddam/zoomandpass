@@ -1,11 +1,221 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Reviews from "../components/Reviews.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+
+  <!-- Sticky Book Now Button (Mobile) -->
+  <a
+    href="/booking"
+    class="fixed bottom-0 left-0 right-0 z-50 font-bold py-4 px-6 text-center text-lg shadow-lg md:hidden transition-colors btn-primary">
+    Book Now
+  </a>
+
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center justify-center bg-linear-to-br from-cyan-50 to-cyan-100">
+    <div class="container mx-auto px-4 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Hero Image -->
+        <div class="order-2 md:order-1">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/IMG_7083.jpeg"
+              alt="Nas with Toyota Corolla - Zoom & Pass"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="order-1 md:order-2 text-center md:text-left">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-600 mb-6 leading-tight">
+            Drive Smart. Pass Fast. Learn with Confidence.
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+            Friendly, patient driving lessons in Camden, Gregory Hills & nearby.
+          </p>
+          <a
+            href="/booking"
+            class="inline-block font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl mb-4 md:mb-0 btn-primary">
+            Book Your Lesson Now →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Zoom & Pass Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-cyan-600 mb-12">
+        Why Choose Zoom & Pass
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Friendly & Patient -->
+        <div class="text-center p-6 rounded-xl card-1">
+          <div class="text-5xl mb-4">😊</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Friendly & Patient
+          </h3>
+          <p class="text-gray-700">
+            Learn in a supportive, stress-free environment
+          </p>
+        </div>
+
+        <!-- Flexible Times -->
+        <div class="text-center p-6 rounded-xl card-2">
+          <div class="text-5xl mb-4">⏰</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Flexible Times</h3>
+          <p class="text-gray-700">Lessons that fit your schedule</p>
+        </div>
+
+        <!-- Local Knowledge -->
+        <div class="text-center p-6 rounded-xl card-3">
+          <div class="text-5xl mb-4">🗺️</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Local Knowledge</h3>
+          <p class="text-gray-700">
+            Expertise in Camden, Gregory Hills & Spring Farm
+          </p>
+        </div>
+
+        <!-- Dual Control Car -->
+        <div class="text-center p-6 rounded-xl card-4">
+          <div class="text-5xl mb-4">🚙</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Dual Control Car</h3>
+          <p class="text-gray-700">Safe learning with dual controls</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Images Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Smiling Students / Steering Wheel -->
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <div
+            class="aspect-4/3 bg-linear-to-br from-lime-200 to-lime-400 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="text-5xl mb-2">🎓</div>
+              <p class="text-lime-800 font-semibold">Smiling Students</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Driving Area -->
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <div
+            class="aspect-4/3 bg-linear-to-br from-cyan-200 to-cyan-400 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="text-5xl mb-2">🏘️</div>
+              <p class="text-cyan-800 font-semibold">Camden, Gregory Hills</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Steering Wheel Close-up -->
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <div
+            class="aspect-4/3 bg-linear-to-br from-teal-200 to-teal-400 flex items-center justify-center">
+            <div class="text-center p-4">
+              <div class="text-5xl mb-2">🛞</div>
+              <p class="text-teal-800 font-semibold">Steering Wheel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Reviews />
+
+  <Footer />
 </Layout>
+
+<style>
+  /* Color variables - Based on Zoom & Pass logo colors */
+  :root {
+    /* Primary brand color - Cyan from logo glow */
+    --primary-color: #06b6d4; /* Cyan 500 */
+    --primary-hover: #0891b2; /* Cyan 600 */
+
+    /* Secondary/Accent color - Yellow from car */
+    --accent-color: #facc15; /* Yellow 400 */
+    --accent-hover: #eab308; /* Yellow 500 */
+
+    /* Supporting gradient colors from logo */
+    --pink: #ec4899; /* Pink 500 */
+    --orange: #f59e0b; /* Amber 500 */
+    --lime: #84cc16; /* Lime 500 */
+    --teal: #14b8a6; /* Teal 500 */
+  }
+
+  /* Button styles - Yellow for CTAs */
+  .btn-primary {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+  }
+
+  /* Card styles using logo gradient colors */
+  .card-1 {
+    background: linear-gradient(
+      135deg,
+      #fce7f3 0%,
+      #fbcfe8 100%
+    ); /* Pink gradient */
+  }
+
+  .card-2 {
+    background: linear-gradient(
+      135deg,
+      #fef3c7 0%,
+      #fde68a 100%
+    ); /* Orange-Yellow gradient */
+  }
+
+  .card-3 {
+    background: linear-gradient(
+      135deg,
+      #d1fae5 0%,
+      #a7f3d0 100%
+    ); /* Lime Green gradient */
+  }
+
+  .card-4 {
+    background: linear-gradient(
+      135deg,
+      #ccfbf1 0%,
+      #99f6e4 100%
+    ); /* Teal gradient */
+  }
+
+  /* Ensure minimum font size for readability */
+  body {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add padding bottom on mobile to account for sticky button */
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 80px;
+    }
+  }
+</style>

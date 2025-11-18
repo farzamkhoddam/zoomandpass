@@ -1,0 +1,171 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="About Nas - Zoom & Pass Driving Lessons">
+  <Header />
+
+  <!-- Sticky Book Now Button (Mobile) -->
+  <a
+    href="/booking"
+    class="fixed bottom-0 left-0 right-0 z-50 font-bold py-4 px-6 text-center text-lg shadow-lg md:hidden transition-colors btn-primary">
+    Book Now
+  </a>
+
+  <!-- Quote Banner -->
+  <section class="bg-linear-to-r from-cyan-500 to-cyan-600 text-white py-12 md:py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-2xl md:text-3xl lg:text-4xl font-bold italic leading-relaxed">
+          "Helping learners drive with confidence, calm, and care."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Profile Photo -->
+          <div class="order-2 md:order-1">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/IMG_7083.jpeg"
+                alt="Nas smiling beside her car"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Bio Content -->
+          <div class="order-1 md:order-2">
+            <h1 class="text-4xl md:text-5xl font-bold text-cyan-600 mb-6">
+              About Nas
+            </h1>
+            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <p>
+                Welcome to Zoom & Pass! I'm Nas, your friendly and patient driving instructor
+                serving Camden, Gregory Hills, and the surrounding areas.
+              </p>
+              <p>
+                With years of experience and a genuine passion for teaching, I specialize in
+                helping nervous beginners, parents booking lessons for their teens, and
+                experienced drivers preparing for their test. My approach is built on three core
+                principles: <strong class="text-cyan-600">confidence, calm, and care</strong>.
+              </p>
+              <p>
+                I understand that learning to drive can be intimidating, which is why I create a
+                supportive, stress-free environment where you can learn at your own pace. Every
+                lesson is tailored to your individual needs, ensuring you build the skills and
+                confidence needed to become a safe, competent driver.
+              </p>
+              <p>
+                My dual-control Toyota Corolla provides a safe learning environment, and my
+                extensive local knowledge of Camden, Gregory Hills, and Spring Farm means you'll
+                be well-prepared for the roads you'll actually drive on.
+              </p>
+              <p class="text-xl font-semibold text-cyan-600">
+                Let's start your driving journey together!
+              </p>
+            </div>
+            <div class="mt-8">
+              <a
+                href="/booking"
+                class="inline-block font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-lg hover:shadow-xl btn-primary">
+                Book Your Lesson Now →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Nas Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-cyan-600 mb-12">
+        Why Learn With Nas?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Experience -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+          <div class="text-5xl mb-4">🎓</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Experienced Instructor</h3>
+          <p class="text-gray-700">
+            Years of experience helping students of all skill levels succeed
+          </p>
+        </div>
+
+        <!-- Patient Approach -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+          <div class="text-5xl mb-4">😊</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Patient & Understanding</h3>
+          <p class="text-gray-700">
+            A calm, supportive approach that puts nervous learners at ease
+          </p>
+        </div>
+
+        <!-- Local Knowledge -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+          <div class="text-5xl mb-4">🗺️</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Local Expert</h3>
+          <p class="text-gray-700">
+            Deep knowledge of Camden, Gregory Hills & Spring Farm roads
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-cyan-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Driving?</h2>
+      <p class="text-xl mb-8 text-cyan-100">
+        Book your first lesson and experience the Zoom & Pass difference
+      </p>
+      <a
+        href="/booking"
+        class="inline-block font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-lg hover:shadow-xl btn-primary">
+        Schedule Your Lesson →
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Button styles - Yellow for CTAs */
+  .btn-primary {
+    background-color: #facc15; /* Yellow 400 */
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    background-color: #eab308; /* Yellow 500 */
+  }
+
+  /* Ensure minimum font size for readability */
+  body {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add padding bottom on mobile to account for sticky button */
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 80px;
+    }
+  }
+</style>
+

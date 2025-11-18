@@ -1,0 +1,124 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img
+          src="/IMG_7027.jpeg"
+          alt="Zoom & Pass Logo"
+          class="h-14 md:h-18 w-auto object-contain rounded-[15px]"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a
+          href="/"
+          class={`font-semibold transition-colors ${
+            currentPath === "/"
+              ? "text-cyan-600 border-b-2 border-cyan-600 pb-1"
+              : "text-gray-700 hover:text-cyan-600"
+          }`}>
+          Home
+        </a>
+        <a
+          href="/about"
+          class={`font-semibold transition-colors ${
+            currentPath === "/about"
+              ? "text-cyan-600 border-b-2 border-cyan-600 pb-1"
+              : "text-gray-700 hover:text-cyan-600"
+          }`}>
+          About
+        </a>
+        <a
+          href="/pricing"
+          class={`font-semibold transition-colors ${
+            currentPath === "/pricing"
+              ? "text-cyan-600 border-b-2 border-cyan-600 pb-1"
+              : "text-gray-700 hover:text-cyan-600"
+          }`}>
+          Pricing
+        </a>
+        <a
+          href="/booking"
+          class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-xl transition-colors shadow-lg">
+          Book Now
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 text-gray-700 hover:text-cyan-600 transition-colors"
+        aria-label="Toggle menu">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav
+      id="mobile-menu"
+      class="hidden md:hidden pb-4 border-t border-gray-200 mt-2">
+      <div class="flex flex-col space-y-3 pt-4">
+        <a
+          href="/"
+          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+            currentPath === "/"
+              ? "text-cyan-600 bg-cyan-50"
+              : "text-gray-700 hover:bg-gray-100"
+          }`}>
+          Home
+        </a>
+        <a
+          href="/about"
+          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+            currentPath === "/about"
+              ? "text-cyan-600 bg-cyan-50"
+              : "text-gray-700 hover:bg-gray-100"
+          }`}>
+          About
+        </a>
+        <a
+          href="/pricing"
+          class={`font-semibold py-2 px-4 rounded-lg transition-colors ${
+            currentPath === "/pricing"
+              ? "text-cyan-600 bg-cyan-50"
+              : "text-gray-700 hover:bg-gray-100"
+          }`}>
+          Pricing
+        </a>
+        <a
+          href="/booking"
+          class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-xl transition-colors shadow-lg text-center">
+          Book Now
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
+
